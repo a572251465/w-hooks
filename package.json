@@ -1,12 +1,21 @@
 {
-  "name": "w-hooks",
+  "name": "apply-hooks",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "build": "gulp"
   },
-  "keywords": [],
+  "keywords": [
+    "hook",
+    "mount",
+    "apply-hooks"
+  ],
+  "files": [
+    "lib",
+    "typings"
+  ],
+  "typings": "typings/index.d.ts",
   "author": "",
   "license": "ISC",
   "devDependencies": {
