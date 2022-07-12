@@ -3,7 +3,7 @@ import { isBrowser, isFunction } from '../utils'
 
 const useMount = (
   fn: INormalFn,
-  props: { isWindow?: boolean } = {}
+  props: { isWindow?: boolean } = { isWindow: true }
 ): [INormalFn] | undefined => {
   if (!isFunction(fn)) {
     console.error(
