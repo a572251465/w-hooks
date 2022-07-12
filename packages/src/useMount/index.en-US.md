@@ -2,6 +2,8 @@
 
 A hook that executes a function after the component is mounted.
 
+[English](https://github.com/a572251465/w-hooks/blob/main/packages/src/useMount/index.en-US.md) | 简体中文
+
 ## Examples
 
 ### Default Usage

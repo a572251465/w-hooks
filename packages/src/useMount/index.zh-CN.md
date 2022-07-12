@@ -2,6 +2,8 @@
 
 只在组件初始化时执行的 Hook。
 
+English | [简体中文](https://github.com/a572251465/w-hooks/blob/main/packages/src/useMount/index.zh-CN.md)
+
 ## 代码演示
 
 ### 基础用法
