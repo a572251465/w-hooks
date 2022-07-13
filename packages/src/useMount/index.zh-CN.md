@@ -11,30 +11,23 @@ English | [简体中文](https://github.com/a572251465/w-hooks/blob/main/package
 ```js
 import { useMount } from 'apply-hooks'
 
-useMount(
-  () => {
-    // TODO
-  },
-  { isWindow: true }
-)
+useMount(() => {
+  // TODO
+})
 ```
 
 ## API
 
 ```typescript
-useMount(fn, { isWindow: false })
+useMount(fn)
 ```
 
 ### 参数
 
-| 参数     | 说明               | 类型                      | 默认值 |
-| -------- | ------------------ | ------------------------- | ------ |
-| fn       | 初始化时执行的函数 | `(...args: any[]) => any` | -      |
-| isWindow | 表示函数执行时机   | `boolean`                 | -      |
+| 参数 | 说明               | 类型                      | 默认值 |
+| ---- | ------------------ | ------------------------- | ------ |
+| fn   | 初始化时执行的函数 | `(...args: any[]) => any` | -      |
 
 ### 执行时机
 
-- `isWindow`
-  - true 在原生事件 onload 之内执行，可以保证获取最新的 dom
-  - false 在绘制之前执行。调用 API`requestAnmationFrame`
-  - 默认值是 true
+> 在原生事件 onload 之内执行，可以保证获取最新的 dom

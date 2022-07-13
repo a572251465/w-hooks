@@ -1,10 +1,7 @@
 import { INormalFn } from '../types'
 import { isBrowser, isFunction } from '../utils'
 
-const useMount = (
-  fn: INormalFn,
-  props: { isWindow?: boolean } = { isWindow: true }
-): [INormalFn] | undefined => {
+const useMount = (fn: INormalFn): [INormalFn] => {
   if (!isFunction(fn)) {
     console.error(
       `useMount: parameter \`fn\` expected to be a function, but got "${typeof fn}".`
@@ -16,14 +13,10 @@ const useMount = (
   }
 
   const cb = (...args: any[]) => fn?.(...args)
-  if (props.isWindow) {
-    window.addEventListener('load', cb)
+  window.addEventListener('load', cb)
 
-    const off = () => window.removeEventListener('load', cb)
-    return [off]
-  } else {
-    requestAnimationFrame(cb)
-  }
+  const off = () => window.removeEventListener('load', cb)
+  return [off]
 }
 
 export default useMount
