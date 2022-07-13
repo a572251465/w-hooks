@@ -2,7 +2,7 @@
 
 只在组件初始化时执行的 Hook。
 
-English | [简体中文](https://github.com/a572251465/w-hooks/blob/main/packages/src/useMount/index.zh-CN.md)
+[English](https://github.com/a572251465/w-hooks/blob/main/packages/src/useMount/index.en-US.md) | 简体中文
 
 ## 代码演示
 
