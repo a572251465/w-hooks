@@ -24,9 +24,9 @@ useMount(fn)
 
 ### Params
 
-| 参数 | 说明                        | 类型                      | 默认值 |
-| ---- | --------------------------- | ------------------------- | ------ |
-| fn   | The function to be executed | `(...args: any[]) => any` | -      |
+| Property | Description                 | Type                      | value |
+| -------- | --------------------------- | ------------------------- | ----- |
+| fn       | The function to be executed | `(...args: any[]) => any` | -     |
 
 ### Execution timing
 

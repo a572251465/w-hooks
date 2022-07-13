@@ -1,0 +1,30 @@
+# useTimeout
+
+timeOut hook, the delayer is destroyed internally, which must waste excess memory.
+
+English | [简体中文](https://github.com/a572251465/w-hooks/blob/main/packages/src/useTimeout/index.zh-CN.md)
+
+## Examples
+
+### Default Usage
+
+```js
+import { useTimeout } from 'apply-hooks'
+
+useTimeout(() => {
+  // TODO
+}, 1000)
+```
+
+## API
+
+```typescript
+useTimeout(fn, delay)
+```
+
+### Params
+
+| Property | Description  | type                      | value |
+| -------- | ------------ | ------------------------- | ----- |
+| fn       | exec fn      | `(...args: any[]) => any` | -     |
+| delay    | timeOut time | `number`                  | 0     |

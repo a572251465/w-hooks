@@ -10,6 +10,7 @@ English | [简体中文](https://github.com/a572251465/w-hooks/blob/main/README.
 ## 📚 Components
 
 - [useMount](https://github.com/a572251465/w-hooks/blob/main/packages/src/useMount/index.en-US.md)
+- [useTimeout](https://github.com/a572251465/w-hooks/blob/main/packages/src/useTimeout/index.en-US.md)
 
 ## ✨ Features
 
