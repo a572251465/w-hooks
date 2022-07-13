@@ -25,13 +25,17 @@ async function buildJs() {
   try {
     const bundle = await rollup.rollup(rollupOptions)
     await bundle.write({
-      file: resolvePath(`./lib/index.ems.js`),
+      file: resolvePath(`./lib/index.es.js`),
       format: 'es'
     })
     await bundle.write({
       file: resolvePath(`./lib/index.iife.js`),
       format: 'iife',
       name: 'wHooks'
+    })
+    await bundle.write({
+      file: resolvePath(`./lib/index.cjs.js`),
+      format: 'cjs'
     })
   } catch (e) {
     console.error(e)
