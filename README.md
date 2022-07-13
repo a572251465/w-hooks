@@ -22,11 +22,11 @@ English | [简体中文](https://github.com/a572251465/w-hooks/blob/main/README.
 ## 📦 Install
 
 ```bash
-$ npm install --save apply-hooks
+$ npm install apply-hooks
 # or
 $ yarn add apply-hooks
 # or
-$ pnpm add apply-hooks
+$ pnpm install apply-hooks
 ```
 
 ## 🔨 Usage
@@ -37,8 +37,8 @@ import { useMount } from 'apply-hooks'
 
 ## 📚 Development Task
 
-- [X] useMount
-- [X] useTimeout
+- [x] useMount
+- [x] useTimeout
 - [ ] useBoolean
 - [ ] useClickAway
 - [ ] useControllableValue

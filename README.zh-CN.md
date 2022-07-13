@@ -19,11 +19,11 @@
 ## 📦 安装
 
 ```bash
-$ npm install --save apply-hooks
+$ npm install apply-hooks
 # or
 $ yarn add apply-hooks
 # or
-$ pnpm add apply-hooks
+$ pnpm install apply-hooks
 ```
 
 ## 🔨 使用
