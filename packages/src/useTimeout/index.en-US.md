@@ -24,7 +24,7 @@ useTimeout(fn, delay)
 
 ### Params
 
-| Property | Description  | type                      | value |
-| -------- | ------------ | ------------------------- | ----- |
-| fn       | exec fn      | `(...args: any[]) => any` | -     |
-| delay    | timeOut time | `number`                  | 0     |
+| Property | Description  | type                      | value | required |
+| -------- | ------------ | ------------------------- | ----- | -------- |
+| fn       | exec fn      | `(...args: any[]) => any` | -     | yes      |
+| delay    | timeOut time | `number`                  | 0     | no       |
