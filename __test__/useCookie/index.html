@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="../../lib/index.iife.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      console.log(document.cookie)
+      const { useCookie } = wHooks
+      const [getCookie, setCookie, getCookies] = useCookie()
+      console.log(
+        '---------------- set cookie --------------------------------'
+      )
+      setCookie('name', 'lihh')
+      setCookie('age', '25')
+      console.log(document.cookie)
+
+      console.log(
+        '---------------- get cookie --------------------------------'
+      )
+      console.log(getCookie('name'))
+
+      console.log(
+        '---------------- get cookies --------------------------------'
+      )
+      console.log(getCookies())
+
+      console.log(
+        '---------------- update cookies --------------------------------'
+      )
+      setCookie('name', 'lihh1')
+      console.log(document.cookie)
+
+      console.log(
+        '---------------- remove cookies --------------------------------'
+      )
+      setCookie('age', undefined)
+      console.log(document.cookie)
+    </script>
+  </body>
+</html>

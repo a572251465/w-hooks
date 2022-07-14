@@ -38,7 +38,7 @@ async function buildJs() {
       format: 'cjs'
     })
   } catch (e) {
-    console.error(e)
+    // console.error(e)
   }
 }
 
