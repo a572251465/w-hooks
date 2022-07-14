@@ -13,6 +13,8 @@ const token = getCookie('token')
 setCookie('token', 'xxx', { path: '/' })
 // get all cookie
 getCookies()
+// remove cookie
+setCookie('xxx', undefined)
 ```
 
 If you want to delete this record from document.cookie, use `setCookie(undefined)`.

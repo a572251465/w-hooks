@@ -13,6 +13,8 @@ const token = getCookie('token')
 setCookie('token', 'xxx', { path: '/' })
 // 获取所有的cookie
 getCookies()
+// 删除cookie
+setCookie('xxx', undefined)
 ```
 
 注意：如果想从 document.cookie 中删除这条数据，可以使用 `setCookie(key, undefined)`。
