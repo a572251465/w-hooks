@@ -2,7 +2,7 @@
 
 Timer hook can destroy the delayer through the internal unified condition function, and it can also be destroyed through the return function. It must waste redundant memory
 
-[简体中文](https://github.com/a572251465/w-hooks/blob/main/packages/src/useInterval/index.en-US.md) | 简体中文
+[简体中文](https://github.com/a572251465/w-hooks/blob/main/packages/src/useInterval/index.zh-CN.md) | English
 
 ## Examples
 
