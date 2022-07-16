@@ -1,5 +1,6 @@
 export { default as useMount } from './useMount'
 export { default as useTimeout } from './useTimeout'
 export { default as useCookie } from './useCookie'
+export { default as useInterval } from './useInterval'
 export * from './utils'
 export * from './types'

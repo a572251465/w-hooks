@@ -1,8 +1,8 @@
 # useTimeout
 
-延时器 hook，内部统一对延时器进行销毁，必须多余的内存浪费.
+延时器 hook，内部统一对延时器进行销毁，避免多余的内存浪费.
 
-[English](https://github.com/a572251465/w-hooks/blob/main/packages/src/useTimeout/index.en-US.md) | 简体中文
+[English](https://github.com/a572251465/w-hooks/blob/main/packages/src/useInterval/index.en-US.md) | 简体中文
 
 ## 代码演示
 

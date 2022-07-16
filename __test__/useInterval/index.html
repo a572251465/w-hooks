@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>useInterval</title>
+    <script src="../../lib/index.iife.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <div id="root1"></div>
+    <div id="root2"></div>
+    <script>
+      const { useInterval } = wHooks
+      let count = 1
+      let count1 = 2
+      let count2 = 1
+
+      useInterval(
+        () => {
+          document.getElementById('root').innerHTML = `我的count是: ${count++}`
+        },
+        {
+          interval: 1000,
+          conditionCb: () => count > 10
+        }
+      )
+
+      const [close] = useInterval(
+        () => {
+          document.getElementById(
+            'root1'
+          ).innerHTML = `我的count是: ${count1++}`
+          if (count1 >= 15) close()
+        },
+        {
+          interval: 1000
+        }
+      )
+
+      const [close1] = useInterval(() => {
+        document.getElementById('root2').innerHTML = `我的count是:${count2++}`
+        if (count2 > 15) close1()
+      }, 1000)
+    </script>
+  </body>
+</html>

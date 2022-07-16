@@ -1,6 +1,6 @@
 # useTimeout
 
-timeOut hook, the delayer is destroyed internally, which must waste excess memory.
+timeOut hook, The delayer hook can destroy the delayer internally to avoid the waste of excess memory
 
 English | [简体中文](https://github.com/a572251465/w-hooks/blob/main/packages/src/useTimeout/index.zh-CN.md)
 

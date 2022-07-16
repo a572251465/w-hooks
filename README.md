@@ -12,6 +12,7 @@ English | [简体中文](https://github.com/a572251465/w-hooks/blob/main/README.
 - [useMount](https://github.com/a572251465/w-hooks/blob/main/packages/src/useMount/index.en-US.md)
 - [useTimeout](https://github.com/a572251465/w-hooks/blob/main/packages/src/useTimeout/index.en-US.md)
 - [useCookie](https://github.com/a572251465/w-hooks/blob/main/packages/src/useCookie/index.en-US.md)
+- [useInterval](https://github.com/a572251465/w-hooks/blob/main/packages/src/useInterval/index.en-US.md)
 
 ## ✨ Features
 
@@ -41,6 +42,7 @@ import { useMount } from 'apply-hooks'
 - [x] useMount
 - [x] useTimeout
 - [x] useCookie
+- [x] useInterval
 - [ ] useBoolean
 - [ ] useClickAway
 - [ ] useControllableValue
@@ -49,7 +51,6 @@ import { useMount } from 'apply-hooks'
 - [ ] useDebounce
 - [ ] useFocusWithin
 - [ ] useFullscreen
-- [ ] useInterval
 - [ ] useKeyPress
 - [ ] useLockFn
 - [ ] useMap

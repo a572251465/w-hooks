@@ -1,6 +1,6 @@
 {
   "name": "apply-hooks",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "A high-quality & reliable JavaScript Hooks library.",
   "main": "lib/index.cjs.js",
   "scripts": {
@@ -28,6 +28,13 @@
   ],
   "typings": "typings/index.d.ts",
   "author": "lihh",
+  "contributors": [
+    "2495041749@qq.com",
+    "1751650135@qq.com",
+    "40670167@qq.com",
+    "llljpf@163.com",
+    "lsm897184113"
+  ],
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.18.6",
