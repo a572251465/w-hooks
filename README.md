@@ -40,35 +40,6 @@ import { useMount } from 'apply-hooks'
 
 ## 📚 Development Task
 
-- [x] useMount
-- [x] useTimeout
-- [x] useCookie
-- [x] useInterval
-- [ ] useBoolean
-- [ ] useClickAway
-- [ ] useControllableValue
-- [ ] useCounter
-- [ ] useCreation
-- [ ] useDebounce
-- [ ] useFocusWithin
-- [ ] useFullscreen
-- [ ] useKeyPress
-- [ ] useLockFn
-- [ ] useMap
-- [ ] useMemoizedFn
-- [ ] useMouse
-- [ ] useNetwork
-- [ ] usePagination
-- [ ] usePrevious
-- [ ] useRafState
-- [ ] useRafTimeout
-- [ ] useReactive
-- [ ] useScroll
-- [ ] useSelections
-- [ ] useSessionStorageState
-- [ ] useSet
-- [ ] useSetState
-- [ ] useSize
-- [ ] useTextSelection
-- [ ] useProxy
-- [ ] useUnmount
+- ahooks
+- lodash
+- jquery
