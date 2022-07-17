@@ -7,6 +7,7 @@ const { nodeResolve } = require('@rollup/plugin-node-resolve')
 const commonJs = require('@rollup/plugin-commonjs')
 const typescript = require('@rollup/plugin-typescript')
 const del = require('rollup-plugin-del')
+const { terser } = require('rollup-plugin-terser')
 
 const resolvePath = (...args) => path.resolve(__dirname, ...args)
 
@@ -17,7 +18,8 @@ const rollupOptions = {
     babel({ babelHelpers: 'bundled' }),
     typescript(),
     commonJs(),
-    nodeResolve()
+    nodeResolve(),
+    terser()
   ]
 }
 

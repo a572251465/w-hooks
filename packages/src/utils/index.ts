@@ -4,6 +4,7 @@ export const isString = (value: unknown) => typeof value === 'string'
 export const isNumber = (num: unknown) => typeof num === 'number'
 export const isUndefined = (value: unknown) => typeof value === 'undefined'
 export const isObject = (value: unknown) => value && typeof value === 'object'
+export const isNull = (value: unknown) => !value && typeof value === 'object'
 export { default as isBrowser } from './isBrowser'
 export { getTag } from './getTag'
 

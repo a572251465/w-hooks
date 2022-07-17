@@ -13,6 +13,7 @@
 - [useTimeout](https://github.com/a572251465/w-hooks/blob/main/packages/src/useTimeout/index.en-US.md)
 - [useCookie](https://github.com/a572251465/w-hooks/blob/main/packages/src/useCookie/index.en-US.md)
 - [useInterval](https://github.com/a572251465/w-hooks/blob/main/packages/src/useInterval/index.en-US.md)
+- [useArrayChunk](https://github.com/a572251465/w-hooks/blob/main/packages/src/useArrayChunk/index.en-US.md)
 
 ## ✨ 特性
 
