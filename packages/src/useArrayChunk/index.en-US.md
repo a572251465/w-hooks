@@ -19,7 +19,7 @@ console.log(useArrayChunk(arr, 2.8)) // [[1, 2], [3, 4], [5, 6], [7]]
 console.log(useArrayChunk(arr, 0)) // [[1, 2, 3, 4, 5, 6, 7]]
 console.log(useArrayChunk(arr, Infinity)) // [1, 2, 3, 4, 5, 6, 7]
 console.log(useArrayChunk('1234', 3)) // [[1, 2, 3], [4]]
-console.log(useArrayChunk('1234')) // [[1, 2, 3], [4]]
+console.log(useArrayChunk('1234')) // [[1, 2, 3, 4]]
 ```
 
 ## API
