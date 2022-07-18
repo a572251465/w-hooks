@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="../../lib/index.iife.js"></script>
+    <title>测试useClipboard</title>
+  </head>
+  <body>
+    <div id="div">sdfsfsdfdsfsfs</div>
+    <input type="text" value="sdfsfsdfsdfsf23456" id="input" />
+    <button onclick="handle1()">moveToClipboard</button>
+    <button onclick="handle2()">copy div</button>
+    <button onclick="handle3()">copy input</button>
+    <button onclick="handle4()">cut div</button>
+    <button onclick="handle5()">cut input</button>
+    <script>
+      const { useClipboard } = wHooks
+      const [copy, cut, moveToClipboard] = useClipboard()
+
+      function handle1() {
+        moveToClipboard('testteststsfsfsdfsdtest')
+      }
+
+      function handle2() {
+        copy('#div')
+      }
+
+      function handle3() {
+        copy('#input')
+      }
+
+      function handle4() {
+        cut('#div')
+      }
+
+      function handle5() {
+        cut('#input')
+      }
+    </script>
+  </body>
+</html>

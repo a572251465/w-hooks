@@ -15,6 +15,7 @@ English | [简体中文](https://github.com/a572251465/w-hooks/blob/main/README.
 - [useInterval](https://github.com/a572251465/w-hooks/blob/main/packages/src/useInterval/index.en-US.md)
 - [useArrayChunk](https://github.com/a572251465/w-hooks/blob/main/packages/src/useArrayChunk/index.en-US.md)
 - [useCompact](https://github.com/a572251465/w-hooks/blob/main/packages/src/useCompact/index.en-US.md)
+- [useClipBoard](https://github.com/a572251465/w-hooks/blob/main/packages/src/useClipBoard/index.en-US.md)
 
 ## ✨ Features
 
