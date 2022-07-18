@@ -19,7 +19,7 @@ Copy / cut the text and the contents of the input box. At the same time, you can
   <button onclick="handle5()">cut input</button>
   <script>
     const { useClipboard } = wHooks
-    // 如果函数useClipboard 设置了默认值 在调用copy/ cut可以不进行参数传递
+    // If the function useclipboard is set to the default value, you can call copy/ cut without passing parameters 
     const [copy, cut, moveToClipboard] = useClipboard()
 
     function handle1() {
