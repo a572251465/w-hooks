@@ -17,6 +17,17 @@ English | [简体中文](https://github.com/a572251465/w-hooks/blob/main/README.
 - [useCompact](https://github.com/a572251465/w-hooks/blob/main/packages/src/useCompact/index.en-US.md)
 - [useClipBoard](https://github.com/a572251465/w-hooks/blob/main/packages/src/useClipboard/index.en-US.md)
 
+## 📚 Tool method
+
+- [isPromise](https://github.com/a572251465/w-hooks/blob/main/packages/src/utils/README.md)
+- [isArrayLike](https://github.com/a572251465/w-hooks/blob/main/packages/src/utils/README.md)
+- [isWindow](https://github.com/a572251465/w-hooks/blob/main/packages/src/utils/README.md)
+- [isNull](https://github.com/a572251465/w-hooks/blob/main/packages/src/utils/README.md)
+- [isFunction](https://github.com/a572251465/w-hooks/blob/main/packages/src/utils/README.md)
+- [toType](https://github.com/a572251465/w-hooks/blob/main/packages/src/utils/README.md)
+- [toInteger](https://github.com/a572251465/w-hooks/blob/main/packages/src/utils/README.md)
+- .....
+
 ## ✨ Features
 
 - Easy to learn and use

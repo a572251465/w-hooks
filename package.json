@@ -4,7 +4,8 @@
   "description": "A high-quality & reliable JavaScript Hooks library.",
   "main": "lib/index.cjs.js",
   "scripts": {
-    "build": "gulp"
+    "build": "gulp",
+    "test": "jest"
   },
   "module": "lib/index.es.js",
   "unpkg": "lib/index.iife.js",
@@ -44,11 +45,14 @@
     "@rollup/plugin-node-resolve": "^13.3.0",
     "@rollup/plugin-typescript": "^8.3.3",
     "@types/gulp": "^4.0.9",
+    "@types/jest": "^28.1.6",
     "@types/node": "^18.0.3",
     "eslint": "^8.19.0",
     "gulp": "^4.0.2",
     "gulp-babel": "^8.0.0",
     "gulp-typescript": "6.0.0-alpha.1",
+    "jest": "^28.1.3",
+    "jest-environment-jsdom": "^28.1.3",
     "prettier": "^2.7.1",
     "rollup": "^2.76.0",
     "rollup-plugin-del": "^1.0.1",
