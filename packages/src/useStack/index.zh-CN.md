@@ -1,13 +1,13 @@
 # useStack
 
-以 JavaScript 的形式实现栈结构。根据参数不同实现方式不同，0 => 数组/ 1 => 链表
+维护一种栈的结构。参数不同内部实现不同
 
 [English](https://github.com/a572251465/w-hooks/blob/main/packages/src/useStack/index.en-US.md) | 简体中文
 
 ## 代码演示
 
 ### 基础用法
- 
+
 ```js
 // array
 import { useStack } from 'apply-hooks'

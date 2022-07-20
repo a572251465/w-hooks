@@ -1,10 +1,10 @@
 # useStack
 
-Implement the stack structure in the form of JavaScript. According to different parameters, the implementation methods are different, 0 = > array / 1 = > linked list
+Maintain a stack structure. Different parameters, different internal implementations
 
 English | [简体中文](https://github.com/a572251465/w-hooks/blob/main/packages/src/useStack/index.zh-CN.md)
 
-## Examples
+## Examples 
 
 ### Default Usage
 
