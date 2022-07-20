@@ -1,16 +1,19 @@
-import { isFunction } from './index'
+import { isFunction, isNull, isObject, isUndefined } from './index'
 import { toType } from './toType'
 import { isWindow } from './isWindow'
 
 export const isArrayLike = <T extends { length: number }>(arrayLike: T) => {
-  const length = !!arrayLike && arrayLike.length,
-    type = toType(arrayLike)
+  const length = !!arrayLike && arrayLike.length
 
-  if (isFunction(arrayLike) || isWindow(arrayLike)) return false
-
-  return (
-    type === 'array' ||
-    length === 0 ||
-    (toType(length) === 'number' && length > 0 && length - 1 in arrayLike)
+  if (
+    isNull(arrayLike) ||
+    isUndefined(arrayLike) ||
+    isFunction(arrayLike) ||
+    isWindow(arrayLike) ||
+    isUndefined(length) ||
+    isNull(length)
   )
+    return false
+
+  return true
 }

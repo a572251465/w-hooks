@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1658243186658" clover="3.2.0">
-  <project timestamp="1658243186658" name="All files">
-    <metrics statements="1" coveredstatements="1" conditionals="173" coveredconditionals="0" methods="51" coveredmethods="1" elements="225" coveredelements="2" complexity="0" loc="1" ncloc="1" packages="1" files="1" classes="1"/>
+<coverage generated="1658292920519" clover="3.2.0">
+  <project timestamp="1658292920519" name="All files">
+    <metrics statements="1" coveredstatements="1" conditionals="170" coveredconditionals="42" methods="51" coveredmethods="16" elements="222" coveredelements="59" complexity="0" loc="1" ncloc="1" packages="1" files="1" classes="1"/>
     <file name="index.cjs.js" path="F:\my-project\w-hooks\lib\index.cjs.js">
-      <metrics statements="1" coveredstatements="1" conditionals="173" coveredconditionals="0" methods="51" coveredmethods="1"/>
-      <line num="1" count="5" type="cond" truecount="0" falsecount="173"/>
+      <metrics statements="1" coveredstatements="1" conditionals="170" coveredconditionals="42" methods="51" coveredmethods="16"/>
+      <line num="1" count="15" type="cond" truecount="42" falsecount="128"/>
     </file>
   </project>
 </coverage>
