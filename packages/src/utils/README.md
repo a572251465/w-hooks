@@ -2,17 +2,16 @@
 
 <div align='center'>
 
-简体中文 | [English](https://github.com/a572251465/w-hooks/blob/main/packages/src/utils/README.md)
-
+English | [简体中文](https://github.com/a572251465/w-hooks/blob/main/packages/src/utils/README.zh-CN.md)
 </div>
 
-### 🔨 为什么
+### 🔨 Why
 
-- 争取做到零失误，经过严密的 jest 测试。[请查看测试用例](https://github.com/a572251465/w-hooks/tree/main/__tests__)
-- 支持各种类型判断
-- 有良好的 ts 类型提示
+- strive to achieve zero errors and pass the rigorous jest test. [please check the test case ](https://github.com/a572251465/w-hooks/tree/main/__tests__)
+- support various types of judgments
+- good TS type prompt
 
-### 📚 方法
+### 📚 Method
 
 - isFunction
 
