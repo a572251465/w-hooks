@@ -12,6 +12,30 @@ const enum IStackType {
   LinkedList = 1
 }
 
+interface IPush<T> {
+  (value: T): boolean
+}
+
+interface IPop<T> {
+  (): T | boolean
+}
+
+interface IPeek<T> {
+  (): T | boolean
+}
+
+interface IIsEmpty {
+  (): boolean
+}
+
+interface IToString {
+  (splitSign?: string): string
+}
+
+interface IGetSize {
+  (): number
+}
+
 class LinkedNode<T> {
   constructor(public val: T, public next?: LinkedNode<T> | null) {
     this.val = val
@@ -21,7 +45,7 @@ class LinkedNode<T> {
 
 class LinkedList<T = string> {
   private head!: LinkedNode<T> | null
-  private size!: number
+  public size!: number
 
   constructor(public max?: number) {
     this.head = null
@@ -69,7 +93,7 @@ class LinkedList<T = string> {
 
     let p = this.head
     while (p && p.next) p = p.next
-    return p!.next!.val
+    return p!.val
   }
 
   isEmpty(): boolean {
@@ -93,7 +117,7 @@ class LinkedList<T = string> {
 }
 
 class Stack<T = string> {
-  private size!: number
+  public size!: number
   private readonly stack!: T[]
 
   constructor(public max?: number) {
@@ -137,16 +161,17 @@ class Stack<T = string> {
   }
 }
 
-const useStack = <T>(type = IStackType.Array, max?: number) => {
+const useStack = <T>(type = IStackType.Array, max?: number): [IPush<T>, IPop<T>, IPeek<T>, IIsEmpty, IToString, IGetSize] => {
   const Instance = type === IStackType.Array ? Stack<T> : LinkedList <T>;
   const instance = new Instance(max)
 
-  const push = instance.push
-  const pop = instance.pop
-  const peek = instance.peek
-  const isEmpty = instance.isEmpty
-  const toString = instance.toString
-  return [push, pop, peek, isEmpty, toString]
+  const getSize = () => instance.size
+  const push = instance.push.bind(instance)
+  const pop = instance.pop.bind(instance)
+  const peek = instance.peek.bind(instance)
+  const isEmpty = instance.isEmpty.bind(instance)
+  const toString = instance.toString.bind(instance)
+  return [push, pop, peek, isEmpty, toString, getSize]
 }
 
 export default useStack

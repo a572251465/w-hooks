@@ -1,6 +1,6 @@
 {
   "name": "apply-hooks",
-  "version": "1.0.13",
+  "version": "1.0.14",
   "description": "A high-quality & reliable JavaScript Hooks library.",
   "main": "lib/index.cjs.js",
   "scripts": {
