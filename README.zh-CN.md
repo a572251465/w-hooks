@@ -7,7 +7,7 @@
 
 </div>
 
-## 📚 组件 
+## 📚 组件
 
 - [useMount](https://github.com/a572251465/w-hooks/blob/main/packages/src/useMount/index.en-US.md)
 - [useTimeout](https://github.com/a572251465/w-hooks/blob/main/packages/src/useTimeout/index.en-US.md)
@@ -16,6 +16,7 @@
 - [useArrayChunk](https://github.com/a572251465/w-hooks/blob/main/packages/src/useArrayChunk/index.en-US.md)
 - [useCompact](https://github.com/a572251465/w-hooks/blob/main/packages/src/useCompact/index.en-US.md)
 - [useClipBoard](https://github.com/a572251465/w-hooks/blob/main/packages/src/useClipboard/index.en-US.md)
+- [useEventLoop](https://github.com/a572251465/w-hooks/blob/main/packages/src/useEventLoop/index.en-US.md)
 
 ## 📚 工具方法
 
