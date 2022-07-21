@@ -31,6 +31,7 @@
 ## 📚 数据结构
 
 - [useStack](https://github.com/a572251465/w-hooks/blob/main/packages/src/useStack/index.en-US.md)
+- [useQueue](https://github.com/a572251465/w-hooks/blob/main/packages/src/useQueue/index.en-US.md)
 
 ## ✨ 特性
 

@@ -16,6 +16,7 @@ English | [简体中文](https://github.com/a572251465/w-hooks/blob/main/README.
 - [useArrayChunk](https://github.com/a572251465/w-hooks/blob/main/packages/src/useArrayChunk/index.en-US.md)
 - [useCompact](https://github.com/a572251465/w-hooks/blob/main/packages/src/useCompact/index.en-US.md)
 - [useClipBoard](https://github.com/a572251465/w-hooks/blob/main/packages/src/useClipboard/index.en-US.md)
+- [useEventLoop]()
 
 ## 📚 Tool method
 
@@ -31,6 +32,8 @@ English | [简体中文](https://github.com/a572251465/w-hooks/blob/main/README.
 ## 📚 Data Structure
 
 - [useStack](https://github.com/a572251465/w-hooks/blob/main/packages/src/useStack/index.en-US.md)
+- [useQueue](https://github.com/a572251465/w-hooks/blob/main/packages/src/useQueue/index.en-US.md)
+- [usePriorityQueue]()
 
 ## ✨ Features
 
