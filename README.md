@@ -33,6 +33,7 @@ English | [简体中文](https://github.com/a572251465/w-hooks/blob/main/README.
 
 - [useStack](https://github.com/a572251465/w-hooks/blob/main/packages/src/useStack/index.en-US.md)
 - [useQueue](https://github.com/a572251465/w-hooks/blob/main/packages/src/useQueue/index.en-US.md)
+- [useLinkedList](https://github.com/a572251465/w-hooks/blob/main/packages/src/useLinkedList/index.en-US.md)
 - [usePriorityQueue]()
 
 ## ✨ Features
