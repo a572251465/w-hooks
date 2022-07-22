@@ -166,8 +166,22 @@ class LinkedList<T> {
   }
 }
 
-const useLinkedList = () => {
-  const linkedList = new LinkedList(),
+export interface ILinkedList<T> {
+  append: (val: T) => boolean
+  insert: (val: T, position?: number) => boolean
+  getAll: () => T[]
+  get: (positon: number) => T | boolean
+  indexOf: (val: T) => number
+  update: (position: number, val: T) => boolean
+  removeAt: (position: number) => boolean | T
+  remove: (val: T) => boolean | T
+  isEmpty: () => boolean
+  size: () => number
+  toString: (splitSign: string) => string
+}
+
+const useLinkedList = <T>(): ILinkedList<T> => {
+  const linkedList = new LinkedList<T>(),
     append = linkedList.append.bind(linkedList),
     insert = linkedList.insert.bind(linkedList),
     get = linkedList.get.bind(linkedList),
