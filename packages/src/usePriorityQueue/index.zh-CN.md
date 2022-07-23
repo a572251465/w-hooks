@@ -1,8 +1,8 @@
-# useQueue
+# usePriorityQueue
 
-维护一种队列的结构。参数不同内部实现不同
+维护一种优先队列的结构。内部基于链表实现
 
-[English](https://github.com/a572251465/w-hooks/blob/main/packages/src/useQueue/index.en-US.md) | 简体中文
+[English](https://github.com/a572251465/w-hooks/blob/main/packages/src/usePriorityQueue/index.en-US.md) | 简体中文
 
 ## 代码演示
 
@@ -10,45 +10,37 @@
 
 ```js
 // array
-import { useQueue } from 'apply-hooks'
+import { usePriorityQueue } from 'apply-hooks'
 
-const [enqueue, dequeue, front, isEmpty, getSize, toString] = useQueue(0)
+const { enqueue, dequeue, front, isEmpty, getSize, toString } =
+  usePriorityQueue()
 
 enqueue(1) // true
 enqueue(2) // true
+enqueue(3, 0) // true
+toString() // 3,1,2
+dequeue() // 3
 toString() // 1,2
-dequeue() // 1
-front() // 2
+getSize() // 2
+front() // 1
 isEmpty() // false
-getSize() // 1
-dequeue() // 2
-dequeue() // false
-isEmpty() // true
-
-// LinkedList
-const [enqueue, dequeue, front, isEmpty, getSize, toString] = useQueue(1)
-// ...
 ```
 
 ## API
 
 ```typescript
-const [enqueue, dequeue, front, isEmpty, getSize, toString] = useQueue(type)
+const { enqueue, dequeue, front, isEmpty, getSize, toString } =
+  usePriorityQueue()
 ```
 
 ### 参数
 
-### useQueue
-
-| 参数 | 说明                 | 类型     | 默认值   |
-| ---- | -------------------- | -------- | -------- |
-| type | 0 => 数组/ 1 => 链表 | `number` | 0        |
-
 ### enqueue
 
-> `enqueue(value: T) => boolean`
+> `enqueue(val: T, sort?: number): boolean`
 
-- value: 添加的值
+- val: 添加的值
+- sort：优先插入的顺序(只能是大于 0 的数字表示)
 - return: 返回值是 boolean 类型。如果添加成功是 true，反之如果添加不成功是 false
 
 ### dequeue

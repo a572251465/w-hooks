@@ -1,8 +1,8 @@
-# useQueue
+# usePriorityQueue
 
-Maintain a queue structure. Different parameters, different internal implementations
+Maintain a priority queue structure. Internal implementation based on linked list
 
-English | [简体中文](https://github.com/a572251465/w-hooks/blob/main/packages/src/useQueue/index.zh-CN.md)
+English | [简体中文](https://github.com/a572251465/w-hooks/blob/main/packages/src/usePriorityQueue/index.zh-CN.md)
 
 ## Examples
 
@@ -10,43 +10,37 @@ English | [简体中文](https://github.com/a572251465/w-hooks/blob/main/package
 
 ```js
 // array
-import { useQueue } from 'apply-hooks'
+import { usePriorityQueue } from 'apply-hooks'
 
-const [enqueue, dequeue, front, isEmpty, getSize, toString] = useQueue(0)
+const { enqueue, dequeue, front, isEmpty, getSize, toString } =
+  usePriorityQueue()
 
 enqueue(1) // true
 enqueue(2) // true
+enqueue(3, 0) // true
+toString() // 3,1,2 
+dequeue() // 3
 toString() // 1,2
-dequeue() // 1
-front() // 2
+getSize() // 2
+front() // 1
 isEmpty() // false
-getSize() // 1
-dequeue() // 2
-dequeue() // false
-isEmpty() // true
-
-// LinkedList
-const [enqueue, dequeue, front, isEmpty, getSize, toString] = useQueue(1)
-// ...
 ```
 
 ## API
 
 ```typescript
-const [enqueue, dequeue, front, isEmpty, getSize, toString] = useQueue(type)
+const { enqueue, dequeue, front, isEmpty, getSize, toString } =
+  usePriorityQueue()
 ```
 
 ### Params
 
-| Property | Description                 | Type     | value |
-| -------- | --------------------------- | -------- | ----- |
-| type     | 0 => array/ 1 => LinkedList | `number` | 0     |
-
 ### enqueue
 
-> `enqueue(value: T) => boolean`
+> `enqueue(val: T, sort?: number): boolean`
 
 - value: add value
+- sort: Priority insertion order (only numbers greater than 0)
 - return: The return value is of boolean type. If the addition is successful, it is true; otherwise, if the addition is unsuccessful, it is false
 
 ### dequeue

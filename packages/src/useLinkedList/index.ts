@@ -19,7 +19,7 @@ class Node<T> {
   }
 }
 
-class LinkedList<T> {
+export class LinkedList<T> {
   public head!: Node<T> | null
   public length!: number
 

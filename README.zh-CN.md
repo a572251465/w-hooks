@@ -5,7 +5,7 @@
 
 [English](https://github.com/a572251465/w-hooks/blob/main/README.md) | 简体中文
 
-</div>
+</div> 
 
 ## 📚 组件
 
@@ -33,7 +33,8 @@
 
 - [useStack](https://github.com/a572251465/w-hooks/blob/main/packages/src/useStack/index.en-US.md)
 - [useQueue](https://github.com/a572251465/w-hooks/blob/main/packages/src/useQueue/index.en-US.md)
-- [useLinkedList](https://github.com/a572251465/w-hooks/blob/main/packages/src/useLinkedList/index.en-US.md) 
+- [useLinkedList](https://github.com/a572251465/w-hooks/blob/main/packages/src/useLinkedList/index.en-US.md)
+- [usePriorityQueue](https://github.com/a572251465/w-hooks/blob/main/packages/src/usePriorityQueue/index.en-US.md)
 
 ## ✨ 特性
 
