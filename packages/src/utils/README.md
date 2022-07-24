@@ -3,6 +3,7 @@
 <div align='center'>
 
 English | [简体中文](https://github.com/a572251465/w-hooks/blob/main/packages/src/utils/README.zh-CN.md)
+
 </div>
 
 ### 🔨 Why
@@ -143,4 +144,30 @@ import { toType } from 'apply-hooks'
 console.log(toType({})) // object
 console.log(toType(123)) // number
 console.log(toType(true)) // boolean
+```
+
+- isEmptyObject
+
+```javascript
+import { isEmptyObject } from 'apply-hooks'
+
+const obj = {
+  [Symbol('aa')]: 'aa'
+}
+
+console.log(isEmptyObject({})) // true
+console.log(isEmptyObject(() => {})) // false
+console.log(isEmptyObject({ name: 'xxx' })) // false
+console.log(isEmptyObject(obj)) // false
+```
+
+- isPlainObject
+
+```javascript
+import { isPlainObject } from 'apply-hooks'
+
+console.log(isPlainObject(null)) // false
+console.log(isPlainObject(() => {})) // false
+console.log(isPlainObject(Object.create(null))) // true
+console.log(isPlainObject({})) // true
 ```
