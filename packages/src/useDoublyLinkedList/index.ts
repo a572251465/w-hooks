@@ -124,6 +124,7 @@ class DoublyLinkedList<T> {
       current = this.head
     while (current) {
       if (current.val === val) return index
+      current = current.next
       index += 1
     }
 
@@ -135,10 +136,11 @@ class DoublyLinkedList<T> {
     let i = 0,
       current = this.head
     while (current) {
-      if (position === i) {
+      if (position === i++) {
         current.val = val
         break
       }
+      current = current.next
     }
 
     return true

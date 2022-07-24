@@ -35,6 +35,7 @@ English | [简体中文](https://github.com/a572251465/w-hooks/blob/main/README.
 - [useQueue](https://github.com/a572251465/w-hooks/blob/main/packages/src/useQueue/index.en-US.md)
 - [useLinkedList](https://github.com/a572251465/w-hooks/blob/main/packages/src/useLinkedList/index.en-US.md)
 - [usePriorityQueue](https://github.com/a572251465/w-hooks/blob/main/packages/src/usePriorityQueue/index.en-US.md)
+- [useDoublyLinkedList](https://github.com/a572251465/w-hooks/blob/main/packages/src/useDoublyLinkedList/index.en-US.md)
 
 ## ✨ Features
 
