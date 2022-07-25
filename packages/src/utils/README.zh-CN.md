@@ -171,3 +171,27 @@ console.log(isPlainObject(() => {})) // false
 console.log(isPlainObject(Object.create(null))) // true
 console.log(isPlainObject({})) // true
 ```
+
+- each
+
+```javascript
+import { each } from 'apply-hooks'
+
+// loop object
+const obj = { a: 1, b: 2, c: 3 }
+each(obj, (value, key) => {
+  console.log(value, key) // 1/a 2/b 3/c
+})
+
+// loop array
+const arr = [1, 2, 3]
+each(arr, (value, key) => {
+  console.log(value, key) // 1/0 2/1 3/2
+})
+
+// loop array-like
+const str = '123'
+each(str, (value, key) => {
+  console.log(value, key) // 1/0 2/1 3/2
+})
+```

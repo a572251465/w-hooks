@@ -13,6 +13,10 @@ describe('Test method <isArrayLike>', () => {
     expect(isArrayLike('123')).toBeTruthy()
   })
 
+  test('is string === true', () => {
+    expect(isArrayLike('123')).toBeTruthy()
+  })
+
   test('is array === true', () => {
     expect(isArrayLike([])).toBeTruthy()
   })
