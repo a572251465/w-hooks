@@ -1,5 +1,8 @@
 import { CookieAttributes } from '../../types'
-import { isNumber, isUndefined, converter, mergeAssign } from '../index'
+import { isNumber } from '../isNumber'
+import { isUndefined } from '../isUndefined'
+import { converter } from '../converter'
+import { mergeAssign } from '../mergeAssign'
 
 const set = (name: string, value: string, attributes?: CookieAttributes) => {
   if (isUndefined(document)) return

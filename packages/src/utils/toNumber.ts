@@ -1,5 +1,4 @@
-import { isSymbol } from './isSymbol'
-import { isNull, isNumber, isObject, isString, isUndefined } from './index'
+import { isObject } from './isObject'
 import { toType } from './toType'
 
 const NAN = 0 / 0

@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1658706588416" clover="3.2.0">
-  <project timestamp="1658706588416" name="All files">
-    <metrics statements="2" coveredstatements="2" conditionals="700" coveredconditionals="202" methods="264" coveredmethods="101" elements="966" coveredelements="305" complexity="0" loc="2" ncloc="2" packages="1" files="2" classes="2"/>
+<coverage generated="1658714977815" clover="3.2.0">
+  <project timestamp="1658714977815" name="All files">
+    <metrics statements="2" coveredstatements="2" conditionals="694" coveredconditionals="199" methods="264" coveredmethods="101" elements="960" coveredelements="302" complexity="0" loc="2" ncloc="2" packages="1" files="2" classes="2"/>
     <file name="index.cjs.js" path="F:\my-project\w-hooks\lib\index.cjs.js">
-      <metrics statements="1" coveredstatements="1" conditionals="350" coveredconditionals="42" methods="132" coveredmethods="16"/>
-      <line num="1" count="15" type="cond" truecount="42" falsecount="308"/>
+      <metrics statements="1" coveredstatements="1" conditionals="347" coveredconditionals="39" methods="132" coveredmethods="16"/>
+      <line num="1" count="64" type="cond" truecount="39" falsecount="308"/>
     </file>
     <file name="index.es.js" path="F:\my-project\w-hooks\lib\index.es.js">
-      <metrics statements="1" coveredstatements="1" conditionals="350" coveredconditionals="160" methods="132" coveredmethods="85"/>
-      <line num="1" count="105" type="cond" truecount="160" falsecount="190"/>
+      <metrics statements="1" coveredstatements="1" conditionals="347" coveredconditionals="160" methods="132" coveredmethods="85"/>
+      <line num="1" count="108" type="cond" truecount="160" falsecount="187"/>
     </file>
   </project>
 </coverage>

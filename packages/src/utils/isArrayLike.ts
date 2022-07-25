@@ -1,5 +1,6 @@
-import { isFunction, isNull, isObject, isUndefined } from './index'
-import { toType } from './toType'
+import { isFunction } from './isFunction'
+import { isNull } from './isNull'
+import { isUndefined } from './isUndefined'
 import { isWindow } from './isWindow'
 
 export const isArrayLike = <T extends { length: number }>(arrayLike: T) => {

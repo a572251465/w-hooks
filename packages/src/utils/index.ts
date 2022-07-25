@@ -1,35 +1,22 @@
-export const isFunction = (fn: unknown) => typeof fn === 'function'
-export const isArray = (arr: unknown[]) => Array.isArray(arr)
-export const isString = (value: unknown) => typeof value === 'string'
-export const isNumber = (num: unknown) => typeof num === 'number'
-export const isUndefined = (value: unknown) => typeof value === 'undefined'
-export const isObject = (value: unknown) => value && typeof value === 'object'
-export const isNull = (value: unknown) => !value && typeof value === 'object'
-export { default as isBrowser } from './isBrowser'
 export { getTag } from './getTag'
-
-export function mergeAssign(target: Record<string, any>, ...args: any[]) {
-  let i = 0
-  for (; i < arguments.length; i += 1) {
-    const source = arguments[i]
-    for (const key in source) {
-      target[key] = source[key]
-    }
-  }
-  return target
-}
-
-export const converter = {
-  read: function (value: string) {
-    if (value[0] === '"') {
-      value = value.slice(1, -1)
-    }
-    return value.replace(/(%[\dA-F]{2})+/gi, decodeURIComponent)
-  },
-  write: function (value: string) {
-    return encodeURIComponent(value).replace(
-      /%(2[346BF]|3[AC-F]|40|5[BDE]|60|7[BCD])/g,
-      decodeURIComponent
-    )
-  }
-}
+export { isSymbol } from './isSymbol'
+export { toNumber } from './toNumber'
+export { toFinite } from './toFinite'
+export { toInteger } from './toInteger'
+export { isArrayLike } from './isArrayLike'
+export { isPromise } from './isPromise'
+export { select } from './select'
+export { isWindow } from './isWindow'
+export { toType } from './toType'
+export { isEmptyObject } from './isEmptyObject'
+export { isPlainObject } from './isPlainObject'
+export { isUndefined } from './isUndefined'
+export { isArray } from './isArray'
+export { isNull } from './isNull'
+export { isFunction } from './isFunction'
+export { isString } from './isString'
+export { isNumber } from './isNumber'
+export { isObject } from './isObject'
+export { default as isBrowser } from './isBrowser'
+export { mergeAssign } from './mergeAssign'
+export { converter } from './converter'
