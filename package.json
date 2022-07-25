@@ -1,6 +1,6 @@
 {
   "name": "apply-hooks",
-  "version": "1.0.21",
+  "version": "1.0.22",
   "description": "A high-quality & reliable JavaScript Hooks library.",
   "main": "lib/index.cjs.js",
   "scripts": {
@@ -24,7 +24,8 @@
     "apply-hooks",
     "stack",
     "queue",
-    "linked-list"
+    "linked-list",
+    "each"
   ],
   "files": [
     "lib",
