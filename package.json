@@ -5,6 +5,7 @@
   "main": "lib/index.cjs.js",
   "scripts": {
     "build": "gulp",
+    "build:debugger": "gulp -f gulpfile.debugger.js",
     "test": "jest"
   },
   "module": "lib/index.es.js",

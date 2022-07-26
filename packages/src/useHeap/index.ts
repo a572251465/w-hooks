@@ -1,4 +1,5 @@
 import { BigHeap } from './BigHeap'
+import { SmallHeap } from './SmallHeap'
 
 interface IPoll<T> {
   (): T | boolean
@@ -16,7 +17,8 @@ interface ISize {
   (): number
 }
 const useHeap = <T>(
-  data: T[]
+  data: T[],
+  type = 'big'
 ): {
   poll: IPoll<T>
   offer: IOffer<T>
@@ -24,7 +26,7 @@ const useHeap = <T>(
   size: ISize
   peek: IPeek<T>
 } => {
-  const heap = new BigHeap<T>(data),
+  const heap = type === 'big' ? new BigHeap<T>(data) : new SmallHeap<T>(data),
     poll = heap.poll.bind(heap),
     offer = heap.offer.bind(heap),
     isEmpty = heap.isEmpty.bind(heap),
