@@ -138,6 +138,14 @@ class OnlyMap<T> {
   forEach(cb: (...args: any[]) => any) {
     each(this.obj, cb)
   }
+
+  // union(...args: Record<string, T>[]): Record<string, T> {}
+
+  // intersection(...args: Record<string, T>[]): Record<string, T> {}
+
+  // difference(...args: Record<string, T>[]): Record<string, T> {}
+
+  // subset(...args: Record<string, T>[]): boolean {}
 }
 
 const useOnlyMap = <T>(): {

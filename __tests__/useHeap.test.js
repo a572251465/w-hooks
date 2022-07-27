@@ -1,5 +1,27 @@
 import { useHeap } from '../lib/index.es'
 
+describe('Test method useBigHeap default once params', () => {
+  const { poll, offer } = useHeap('big')
+  expect(offer(100)).toBeTruthy()
+  expect(offer(200)).toBeTruthy()
+  expect(offer(30)).toBeTruthy()
+
+  expect(poll()).toBe(200)
+  expect(poll()).toBe(100)
+  expect(poll()).toBe(30)
+})
+
+describe('Test method useBigHeap default params', () => {
+  const { poll, offer } = useHeap()
+  expect(offer(100)).toBeTruthy()
+  expect(offer(200)).toBeTruthy()
+  expect(offer(30)).toBeTruthy()
+
+  expect(poll()).toBe(200)
+  expect(poll()).toBe(100)
+  expect(poll()).toBe(30)
+})
+
 describe('Test method useSmallHeap', () => {
   const { poll, offer, isEmpty, size, peek } = useHeap(
     [10, 30, 20, 60, 120, 100],

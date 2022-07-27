@@ -1,3 +1,4 @@
+import { isArray } from '../utils/isArray'
 import { BigHeap } from './BigHeap'
 import { SmallHeap } from './SmallHeap'
 
@@ -16,17 +17,27 @@ interface IIsEmpty {
 interface ISize {
   (): number
 }
-const useHeap = <T>(
-  data: T[],
-  type = 'big'
+function useHeap<T>(
+  data?: T[] | string,
+  type?: string
 ): {
   poll: IPoll<T>
   offer: IOffer<T>
   isEmpty: IIsEmpty
   size: ISize
   peek: IPeek<T>
-} => {
-  const heap = type === 'big' ? new BigHeap<T>(data) : new SmallHeap<T>(data),
+} {
+  let paramData = data || []
+  let paramType = type || 'big'
+  if (!isArray(paramData)) {
+    paramType = paramData === 'big' ? 'big' : 'small'
+    paramData = []
+  }
+
+  const heap =
+      paramType === 'big'
+        ? new BigHeap<T>(paramData as T[])
+        : new SmallHeap<T>(paramData as T[]),
     poll = heap.poll.bind(heap),
     offer = heap.offer.bind(heap),
     isEmpty = heap.isEmpty.bind(heap),

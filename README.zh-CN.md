@@ -36,6 +36,7 @@
 - [useLinkedList](https://github.com/a572251465/w-hooks/blob/main/packages/src/useLinkedList/index.en-US.md)
 - [usePriorityQueue](https://github.com/a572251465/w-hooks/blob/main/packages/src/usePriorityQueue/index.en-US.md)
 - [useDoublyLinkedList](https://github.com/a572251465/w-hooks/blob/main/packages/src/useDoublyLinkedList/index.en-US.md)
+- [useHeap](https://github.com/a572251465/w-hooks/blob/main/packages/src/useHeap/index.en-US.md)
 
 ## ✨ 特性
 
