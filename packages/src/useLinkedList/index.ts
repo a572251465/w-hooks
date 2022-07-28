@@ -170,7 +170,7 @@ export interface ILinkedList<T> {
   append: (val: T) => boolean
   insert: (val: T, position?: number) => boolean
   getAll: () => T[]
-  get: (positon: number) => T | boolean
+  get: (position: number) => T | boolean
   indexOf: (val: T) => number
   update: (position: number, val: T) => boolean
   removeAt: (position: number) => boolean | T
