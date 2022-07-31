@@ -32,7 +32,7 @@ const requestIdleCallback = (
   options: { timeout?: number } = {}
 ) => {
   if (!isFunction(callback)) {
-    console.error(`params callback must be a function`)
+    throw new Error('callback must be a function')
   }
 
   const { timeout } = options

@@ -71,4 +71,25 @@ describe('Test method useBinarySearchTree', () => {
   it('isEmpty', () => {
     expect(isEmpty()).toBeFalsy()
   })
+
+  it('remove - 1', () => {
+    expect(remove(3)).toBe(3)
+    expect(toKeysArray(inOrderTraverse)).toEqual([
+      5, 10, 15, 20, 22, 25, 30, 40
+    ])
+  })
+
+  it('remove - 2', () => {
+    expect(insert(3)).toBeTruthy()
+    expect(remove(5)).toBe(5)
+    expect(toKeysArray(inOrderTraverse)).toEqual([
+      3, 10, 15, 20, 22, 25, 30, 40
+    ])
+  })
+
+  it('remove - 3', () => {
+    expect(insert(5)).toBeTruthy()
+    expect(remove(30)).toBe(30)
+    expect(toKeysArray(inOrderTraverse)).toEqual([3, 5, 10, 15, 20, 22, 25, 40])
+  })
 })

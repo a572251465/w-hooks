@@ -254,11 +254,12 @@ class BinarySearchTree<T = number> {
       isLeftNode = true
     while (root) {
       const rootKey = this.cb(root.value)
-      parent = root
       if (rootKey === key) {
         current = root
         break
       }
+
+      parent = root
 
       if (rootKey < key) {
         root = root.right
