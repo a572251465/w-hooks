@@ -14,14 +14,16 @@ let idleTimeout: null | NodeJS.Timeout = null
 messageChannel.port2.onmessage = () => {
   const currentTime = getTime()
   const didTimeout = frameDeadline <= currentTime
-  if (didTimeout || timeRemaining() > 1) {
+
+  // 如果没有过期
+  if (timeRemaining() > 1) {
     if (idleTimeout) {
       clearTimeout(idleTimeout)
       idleTimeout = null
     }
     if (pendingCallback && isFunction(pendingCallback))
       pendingCallback({
-        didTimeout: frameDeadline <= currentTime,
+        didTimeout,
         timeRemaining
       })
   }
@@ -38,7 +40,9 @@ const requestIdleCallback = (
   const { timeout } = options
   if (isNumber(timeout) && (timeout as number) > 0) {
     idleTimeout = setTimeout(() => {
-      callback()
+      callback({ didTimeout: true, timeRemaining: () => 0 })
+      clearTimeout(idleTimeout as NodeJS.Timeout)
+      idleTimeout = null
     }, timeout)
   }
 
