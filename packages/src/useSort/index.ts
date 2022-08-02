@@ -71,15 +71,61 @@ const insertionSort: ISortFn = (arr) => {
   return arr
 }
 
+const hillSort: ISortFn = (arr) => {
+  if (arr.length <= 1) return arr
+
+  // 以长度的中间之为分割点
+  let gap = (arr.length - 1) >> 1
+  while (gap >= 1) {
+    let i = gap
+    for (; i < arr.length; i += 1) {
+      const cur = arr[i]
+
+      // 表示上一个
+      let endIndex = i - gap
+      while (endIndex >= 0 && cur < arr[endIndex]) {
+        ;[arr[endIndex + gap], arr[endIndex]] = [
+          arr[endIndex],
+          arr[endIndex + gap]
+        ]
+        endIndex -= gap
+      }
+    }
+
+    gap = gap >> 1
+  }
+  return arr
+}
+
+const fastSort: ISortFn = (arr) => {
+  if (arr.length <= 1) return arr
+
+  const centerIndex = (arr.length - 1) >> 1
+  const centerValue = arr[centerIndex]
+
+  const leftArr = [] as number[]
+  const rightArr = [] as number[]
+  let i = 0
+  for (; i < arr.length; i += 1) {
+    if (i === centerIndex) continue
+    ;(arr[i] > centerValue ? rightArr : leftArr).push(arr[i])
+  }
+  return fastSort(leftArr).concat(centerValue).concat(fastSort(rightArr))
+}
+
 const useSort = (): {
   bubbleSort: ISortFn
   selectionSort: ISortFn
   insertionSort: ISortFn
+  hillSort: ISortFn
+  fastSort: ISortFn
 } => {
   return {
     bubbleSort,
     selectionSort,
-    insertionSort
+    insertionSort,
+    hillSort,
+    fastSort
   }
 }
 
