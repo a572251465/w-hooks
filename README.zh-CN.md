@@ -17,6 +17,7 @@
 - [useCompact](https://github.com/a572251465/w-hooks/blob/main/packages/src/useCompact/index.en-US.md)
 - [useClipBoard](https://github.com/a572251465/w-hooks/blob/main/packages/src/useClipboard/index.en-US.md)
 - [useEventLoop](https://github.com/a572251465/w-hooks/blob/main/packages/src/useEventLoop/index.en-US.md)
+- [useSort](https://github.com/a572251465/w-hooks/blob/main/packages/src/useSort/index.en-US.md)
 
 ## 📚 工具方法
 
