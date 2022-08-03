@@ -9,11 +9,12 @@
  * remove(key) 从树中移除某个键
  */
 
-import { isArray, isFunction } from '../utils'
+import {isArray, isFunction} from '../utils'
 
 interface IInsert<T> {
   (value: T): boolean
 }
+
 interface ISearch<T> {
   (key: number): T | boolean
 }
@@ -62,6 +63,7 @@ class Node<T> {
   public value!: T
   left: Node<T> | null = null
   right: Node<T> | null = null
+
   constructor(
     value: T,
     left: Node<T> | null = null,
@@ -84,6 +86,7 @@ class BinarySearchTree<T = number> {
   public length = 0
   public data!: T[]
   public cb!: (value: T) => number
+
   constructor(data?: T[] | ICb<T>, cb?: ICb<T>) {
     this.root = null
 
@@ -244,7 +247,26 @@ class BinarySearchTree<T = number> {
     return arr
   }
 
-  private del(key: number): T | boolean {
+  private getSuccessor(delNode: Node<T>) {
+    let successor = delNode
+    let current = delNode.right
+    let successorParent = delNode
+
+    while (current != null) {
+      successorParent = successor
+      successor = current
+      current = current.left
+    }
+
+    if (successor != delNode.right) {
+      successorParent.left = successor.right
+      successor.right = delNode.right
+    }
+
+    return successor
+  }
+
+  remove(key: number): T | boolean {
     if (this.isEmpty()) return false
 
     let current: Node<T> | null = null,
@@ -308,19 +330,18 @@ class BinarySearchTree<T = number> {
     }
 
     // 如果有两个节点
-    let leftChild = current.left
-    const res = current.value
-    const max = this.max(leftChild)
-    current.value = max as T
-    this.remove(this.cb(max as T))
+    let successor = this.getSuccessor(current)
+    if (current === this.root) {
+      this.root = successor
+    } else if (isLeftNode) {
+      parent!.left = successor
+    } else {
+      parent!.right = successor
+    }
 
-    return res
-  }
-
-  remove(key: number): T | boolean {
-    const res = this.del(key)
-    if (res !== false) this.length -= 1
-    return res
+    successor.left = current.left
+    this.length -= 1
+    return current.value
   }
 }
 
