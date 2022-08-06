@@ -4,6 +4,7 @@
  * 3. 插入排序
  * 4. 希尔排序
  * 5. 快速排序
+ * 6. 归并排序
  */
 
 interface ISortFn {
@@ -113,19 +114,62 @@ const fastSort: ISortFn = (arr) => {
   return fastSort(leftArr).concat(centerValue).concat(fastSort(rightArr))
 }
 
+const mergeHandle = (
+  arr: number[],
+  left: number,
+  middle: number,
+  right: number
+) => {
+  const heap = new Array(right - left + 1)
+
+  let i = 0,
+    p1 = left,
+    p2 = middle + 1
+  while (p1 <= middle && p2 <= right) {
+    heap[i++] = arr[p1] < arr[p2] ? arr[p1++] : arr[p2++]
+  }
+
+  while (p1 <= middle) heap[i++] = arr[p1++]
+  while (p2 <= right) heap[i++] = arr[p2++]
+
+  let j = 0
+  for (; j < heap.length; j += 1) {
+    arr[left + j] = heap[j]
+  }
+}
+const mergeProcess = (arr: number[], left: number, right: number) => {
+  if (left >= right) return
+
+  const middle = left + ((right - left) >> 1)
+  mergeProcess(arr, left, middle)
+  mergeProcess(arr, middle + 1, right)
+
+  mergeHandle(arr, left, middle, right)
+}
+
+const mergeSort: ISortFn = (arr) => {
+  if (arr.length <= 1) return arr
+
+  mergeProcess(arr, 0, arr.length - 1)
+
+  return arr
+}
+
 const useSort = (): {
   bubbleSort: ISortFn
   selectionSort: ISortFn
   insertionSort: ISortFn
   hillSort: ISortFn
   fastSort: ISortFn
+  mergeSort: ISortFn
 } => {
   return {
     bubbleSort,
     selectionSort,
     insertionSort,
     hillSort,
-    fastSort
+    fastSort,
+    mergeSort
   }
 }
 
