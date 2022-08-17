@@ -48,13 +48,8 @@ class SmallHeap<T> {
   }
 
   private upBubble(index: number): void {
-    while (index > 0) {
+    while (this.data[index] < this.data[(index - 1) >> 1]) {
       const parentIndex = (index - 1) >> 1
-
-      const currentValue = this.data[index],
-        parentValue = this.data[parentIndex]
-
-      if (parentValue <= currentValue) break
       this.swap(index, parentIndex)
       index = parentIndex
     }

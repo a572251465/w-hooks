@@ -14,16 +14,18 @@ interface IMoveToClipboard {
   (value: string): Promise<string | boolean>
 }
 
-const useClipboard = (
-  defaultElement: HTMLElement | string
-): [ICopy, ICut, IMoveToClipboard] => {
+const useClipboard = (): {
+  copy: ICopy
+  cut: ICut
+  moveToClipboard: IMoveToClipboard
+} => {
   if (!IsBrowser()) console.error(`must be running in browser`)
   if (!navigator.clipboard) {
     console.error(`not support API<navigator.clipboard> copy/ cut content fail`)
   }
 
   const copy: ICopy = (element: HTMLElement | string) => {
-    const el = selector(element || defaultElement)
+    const el = selector(element)
     const text = select(el as HTMLDivElement)
     return new Promise((resolve) => {
       navigator.clipboard
@@ -74,7 +76,7 @@ const useClipboard = (
     })
   }
 
-  return [copy, cut, moveToClipboard]
+  return { copy, cut, moveToClipboard }
 }
 
 export default useClipboard
