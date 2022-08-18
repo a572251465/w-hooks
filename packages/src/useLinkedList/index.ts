@@ -178,6 +178,7 @@ export interface ILinkedList<T> {
   isEmpty: () => boolean
   size: () => number
   toString: (splitSign: string) => string
+  _self: LinkedList<T>
 }
 
 const useLinkedList = <T>(): ILinkedList<T> => {
@@ -205,7 +206,8 @@ const useLinkedList = <T>(): ILinkedList<T> => {
     isEmpty,
     size,
     toString,
-    getAll
+    getAll,
+    _self: linkedList
   }
 }
 
