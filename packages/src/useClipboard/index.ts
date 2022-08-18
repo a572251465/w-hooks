@@ -28,6 +28,10 @@ const useClipboard = (): {
     const el = selector(element)
     const text = select(el as HTMLDivElement)
     return new Promise((resolve) => {
+      if (!navigator.clipboard) {
+        resolve(false)
+        return
+      }
       navigator.clipboard
         .writeText(text)
         .then(() => {
